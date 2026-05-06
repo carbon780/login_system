@@ -1,1 +1,9 @@
+Activate virtual environment : ".\.venv\Scripts\activate"
+Before running any file run this command "pip install -r requirements.txt"
 
+
+Run using venv Python directly : ".\.venv\Scripts\python.exe app.py"
+run python file directly if venv is activated : "python app.py"
+
+
+intall extension sqlite viewer to see database.
