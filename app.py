@@ -72,39 +72,5 @@ def login():
 
 
 
-
-#This delete and update will be added later when frontend will be ready
-'''
-# DELETE USER
-@app.route("/delete", methods=["POST"])
-def delete_user():
-    data = request.json
-    email = data.get("email")
-
-    conn = get_db()
-    conn.execute("DELETE FROM users WHERE email=?", (email,))
-    conn.commit()
-    conn.close()
-
-    return jsonify({"message": "User deleted"})
-
-
-# UPDATE PASSWORD
-@app.route("/update", methods=["POST"])
-def update_password():
-    data = request.json
-    email = data.get("email")
-    new_password = data.get("password")
-
-    conn = get_db()
-    conn.execute("UPDATE users SET password=? WHERE email=?", (new_password, email))
-    conn.commit()
-    conn.close()
-
-    return jsonify({"message": "Password updated"})
-'''
-
-
-
 if __name__ == "__main__":
     app.run(debug=True)
